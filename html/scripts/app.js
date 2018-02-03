@@ -115,7 +115,7 @@
 			}
 
 		} else {
-			contactHTML = '<div class="contact no-item online"><p class="no-item">Aucun contact</p></div>';
+			contactHTML = '<div class="contact no-item online"><p class="no-item">No contacts</p></div>';
 		}
 		
 		$('#phone #repertoire .repertoire-list').html(contactHTML);
@@ -177,7 +177,7 @@
 			
 			for(let i=0; i<messages.length; i++) {
 
-				let fromName   = "Inconnu";
+				let fromName   = "Unknown";
 				let fromNumber = messages[i].value;
 				let anonyme    = null;
 				
@@ -187,9 +187,9 @@
 				if(messages[i].anonyme) {
 					
 					if(messages[i].job == "player")
-						fromName = "Anonyme";
+						fromName = "Anonymous";
 
-					fromNumber = "Anonyme";
+					fromNumber = "Anonymous";
 					anonyme    = 'anonyme';
 
 				} else {
@@ -222,7 +222,7 @@
 				messageHTML = html + messageHTML;
 			}
 		} else {
-			messageHTML = '<div class="message no-item"><p class="no-item">Aucun messages</p></div>';
+			messageHTML = '<div class="message no-item"><p class="no-item">No messages</p></div>';
 		}
 		
 		$('#phone #messages .messages-list').html(messageHTML);
@@ -237,7 +237,7 @@
 		
 		$('.message .ok-btn').click(function() {
 			$.post('http://esx_phone/send', JSON.stringify({
-				message: $(this).attr('data-contact-job') + ": Bien reçu !",
+				message: $(this).attr('data-contact-job') + ": Received!",
 				number : $(this).attr('data-contact-number'),
 				anonyme: false
 			}))
@@ -299,7 +299,7 @@
 		$('.phone-icon').unbind('click');
 
 		$('#phone .menu .home').html(
-			'<li class="phone-icon" id="phone-icon-rep">Repertoire</li>' +
+			'<li class="phone-icon" id="phone-icon-rep">Contacts</li>' +
 			'<li class="phone-icon" id="phone-icon-msg">Messages</li>'
 		);
 
