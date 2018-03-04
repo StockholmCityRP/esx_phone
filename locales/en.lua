@@ -3,9 +3,9 @@ Locales['en'] = {
   ['press_take_call'] = ' - Press ~INPUT_CONTEXT~ to take the call',
   ['taken_call'] = ' has taken the call',
   ['gps_position'] = 'destination entered into the GPS',
-  ['message_sent'] = 'message sent',
+  ['message_sent'] = 'The message has been sent',
   ['cannot_add_self'] = 'you can not add yourself',
-  ['number_in_contacts'] = 'this number is alraedy in your contact list',
+  ['number_in_contacts'] = 'this number is already in your contact list',
   ['contact_added'] = 'contact added',
   ['number_not_assigned'] = 'this number is not assigned...',
 }
