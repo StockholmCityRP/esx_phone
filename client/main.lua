@@ -240,7 +240,7 @@ end)
 Citizen.CreateThread(function()
   while true do
 
-    Wait(0)
+    Citizen.Wait(10)
 
     if GUI.PhoneIsShowed then -- codes here: https://pastebin.com/guYd0ht4
       DisableControlAction(0, 1,    true) -- LookLeftRight
@@ -263,7 +263,7 @@ Citizen.CreateThread(function()
       DisableControlAction(0, 17,   true) -- Select Prev Weapon
     else
 
-      if IsControlPressed(0, Keys['F1']) and (GetGameTimer() - GUI.Time) > 150 then
+      if IsControlPressed(0, Keys['F1']) and GetLastInputMethod(2) and (GetGameTimer() - GUI.Time) > 150 then
 
         if not ESX.UI.Menu.IsOpen('phone', GetCurrentResourceName(), 'main') then
           ESX.UI.Menu.CloseAll()
